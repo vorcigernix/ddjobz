@@ -5,7 +5,7 @@ export const Account = () => {
   const { data: ensNameData } = useEnsName({ address: accountData?.address })
 
   return (
-    <div>
+    <div className=''>
       {ensNameData ?? accountData?.address}
       {ensNameData ? ` (${accountData?.address})` : null}
     </div>
