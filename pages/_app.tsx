@@ -6,7 +6,6 @@ import NavBar from '../components/Nav/NavBar'
 
 import { Provider, chain, createClient, defaultChains } from 'wagmi'
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
-import { InjectedConnector } from 'wagmi/connectors/injected'
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
 
@@ -41,7 +40,6 @@ const client = createClient({
           rpc: { [chain.id]: rpcUrl },
         },
       }),
-      new InjectedConnector({ chains, options: { name: 'Injected' } }),
     ]
   },
   provider({ chainId }) {
@@ -61,9 +59,6 @@ const client = createClient({
 function App({ Component, pageProps }: AppProps) {
   return (
     <Provider client={client}>
-      <NextHead>
-        <title>wagmi</title>
-      </NextHead>
       <NavBar />
       <Component {...pageProps} />
     </Provider>
