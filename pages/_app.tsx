@@ -1,7 +1,6 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { providers } from 'ethers'
-import NextHead from 'next/head'
 import NavBar from '../components/Nav/NavBar'
 
 import { Provider, chain, createClient, defaultChains } from 'wagmi'

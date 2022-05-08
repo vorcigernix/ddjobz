@@ -1,6 +1,7 @@
+import { NextPage } from 'next/types'
 import { Connect } from '../components/Connect'
 
-function ConnectPage() {
+const ConnectPage: NextPage = () =>  {
   return <Connect />
 }
 

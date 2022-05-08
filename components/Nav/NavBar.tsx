@@ -1,6 +1,4 @@
 import { useAccount } from 'wagmi'
-
-import { Account } from '../Account'
 import { useIsMounted } from '../hooks'
 import Link from 'next/link'
 
@@ -39,11 +37,11 @@ function NavBar() {
             </Link>
             {isMounted && data && (
               <>
-                <Link href="/home" className="mr-5 hover:text-gray-900">
-                  <a className="mr-5 hover:text-gray-900">Home</a>
-                </Link>
                 <Link href="/profile" className="mr-5 hover:text-gray-900">
                   <a className="mr-5 hover:text-gray-900">Profile</a>
+                </Link>
+                <Link href="/company" className="mr-5 hover:text-gray-900">
+                  <a className="mr-5 hover:text-gray-900">Company</a>
                 </Link>
               </>
             )}
